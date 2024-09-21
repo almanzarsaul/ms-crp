@@ -1,11 +1,16 @@
 import { Text, Pressable, View, StyleSheet, Image } from "react-native";
 import { COLOR_PRIMARY } from "@/assets/colors";
 import { Link } from "expo-router";
+import { initializeApp } from "@react-native-firebase/app";
+import { getFirestore } from "@react-native-firebase/firestore";
 /**
  * Main screen that user sees if not logged in.
  * @returns React.FC
  * Created by Saul Almanzar
  */
+
+
+
 export default function Index() {
   return (
     <View style={styles.flex}>

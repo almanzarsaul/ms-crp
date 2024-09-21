@@ -16,11 +16,11 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "org.communityrestorationproject.center",
-      "googleServicesFile": "./firebase/GoogleService-Info.plist"
+      "googleServicesFile": "./android/app/GoogleService-Info.plist"
     },
     "android": {
       "package": "org.communityrestorationproject.center",
-      "googleServicesFile": "./firebase/google-services.json"
+      "googleServicesFile": "./android/app/google-services.json"
     },
     "web": {
       "bundler": "metro",
