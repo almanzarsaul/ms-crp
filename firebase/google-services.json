@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "392688296673",
+    "project_id": "crp-center",
+    "storage_bucket": "crp-center.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392688296673:android:6474b0e8e9f2124ac10da0",
+        "android_client_info": {
+          "package_name": "org.communityrestorationproject.center"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO-8TDMDiUbW6LGk2F8jHiRDyEHktHQeA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
