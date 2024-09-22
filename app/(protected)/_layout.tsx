@@ -11,7 +11,8 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: "white",
         tabBarActiveBackgroundColor: COLOR_PRIMARY,
-        tabBarStyle: { height: 60 },
+        tabBarStyle: { height: 80 },
+        tabBarItemStyle: {height: 80},
         tabBarLabelStyle: { display: "none" },
       }}
     >
