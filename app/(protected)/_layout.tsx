@@ -12,14 +12,14 @@ export default function TabLayout() {
         tabBarActiveTintColor: "white",
         tabBarActiveBackgroundColor: COLOR_PRIMARY,
         tabBarStyle: { height: 80 },
-        tabBarItemStyle: {height: 80},
+        tabBarItemStyle: { height: 80 },
         tabBarLabelStyle: { display: "none" },
       }}
     >
       <Tabs.Screen
-        name="CommunityScreen"
+        name="community"
         options={{
-          title: "Community",
+          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Image
               style={{ width: 45, height: 45 }}
@@ -33,9 +33,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="EventsScreen"
+        name="events"
         options={{
-          title: "Events",
+          headerShown: false,
           tabBarIcon: ({ focused }) => (
             <Ionicons
               size={30}
@@ -46,14 +46,15 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="SettingsScreen"
+        name="settings"
         options={{
-          title: user?.displayName || user?.email || "Settings", // Fallback to email if user does not have a display name. Should never have to fall back to "Settings".
-          tabBarIcon: () => (
-            <Image
-              style={{ width: 28, height: 28 }}
-              source={{ uri: "https://avatar.iran.liara.run/public/1.png" }}
-            ></Image>
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <Ionicons
+              size={30}
+              color={focused ? "white" : "fff"}
+              name={focused ? "person" : "person-outline"}
+            />
           ),
         }}
       />

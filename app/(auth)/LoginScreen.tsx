@@ -25,6 +25,7 @@ const LoginScreen = () => {
     try {
       await auth().signInWithEmailAndPassword(email, password);
     } catch (error) {
+      console.log(error);
       const err = error as FirebaseError;
       alert("Sign in failed: " + err.message);
     }
