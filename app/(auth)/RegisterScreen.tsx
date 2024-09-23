@@ -16,6 +16,7 @@ import {
   deleteAccessTokenById,
   getAccessTokenDocumentById,
 } from "@/models/AccessToken";
+import { createUser } from "@/models/User";
 
 /**
  * The UI and logic for the Login Screen.
@@ -67,11 +68,8 @@ const RegisterScreen = () => {
         const userCredential: FirebaseAuthTypes.UserCredential =
           await auth().createUserWithEmailAndPassword(email, password);
         const user = userCredential.user;
-        await user.updateProfile({
-          displayName: fullName,
-        });
-
-        console.log("Updated user's display name.");
+        await createUser(user, fullName);
+        console.log("Creating user Firestore document");
 
         await deleteAccessTokenById(accessToken);
       } catch (error) {
@@ -143,7 +141,7 @@ const RegisterScreen = () => {
             onChangeText={setConfirmPassword}
           />
         </View>
-        <View style={styles.formField}>
+        {/* <View style={styles.formField}>
           <Text style={styles.text}>Birthday</Text>
           <Pressable onPress={() => setShowDatePicker(true)}>
             <TextInput readOnly style={styles.input}>
@@ -154,12 +152,12 @@ const RegisterScreen = () => {
               })}
             </TextInput>
           </Pressable>
-        </View>
+        </View> */}
         <Pressable style={styles.button} onPress={() => register()}>
           <Text style={styles.buttonText}>Register</Text>
         </Pressable>
 
-        {showDatePicker && (
+        {/* {showDatePicker && (
           <RNDatePicker
             value={birthday}
             onChange={(_, selectedDate: any) => {
@@ -167,7 +165,7 @@ const RegisterScreen = () => {
               setBirthday(selectedDate);
             }}
           />
-        )}
+        )} */}
       </View>
     </KeyboardAvoidingView>
   );

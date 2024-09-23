@@ -8,12 +8,7 @@ import firestore, {
   FirebaseFirestoreTypes,
   Timestamp,
 } from "@react-native-firebase/firestore";
-
-interface AccessToken {
-  fullName: string;
-  createdAt: FirebaseFirestoreTypes.Timestamp;
-  expiresAt: FirebaseFirestoreTypes.Timestamp;
-}
+import { AccessToken } from "./types/AccessToken";
 
 /**
  * Adds an Access Token document to Firestore.

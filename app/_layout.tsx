@@ -27,7 +27,7 @@ export default function RootLayout() {
     const inProtectedGroup = segments[0] === "(protected)";
 
     if (user && !inProtectedGroup) {
-      router.replace("/(protected)/CommunityScreen");
+      router.replace("/(protected)/community");
     } else if (!user && inProtectedGroup) {
       router.replace("/");
     }
